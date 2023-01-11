@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+#rock {
+    height: 200px;
+    width: 200px;
+    background-image: url(rock.webp);
+
+}
+
+#paper {
+    height: 200px;
+    width: 200px;
+    background-image: url(paper.webp);
+}
+
+#scissors {
+    height: 200px;
+    width: 200px;
+    background-image: url(scissors.webp);
+}
