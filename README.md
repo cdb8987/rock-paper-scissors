@@ -5,7 +5,7 @@ I used Javascript, HTML and CSS to create a rock paper scissors game.  I built t
 
 
 
-<img src="rps_screenshot.png">
+<img src="images/rps_screenshot.png">
 
 ## Author
 

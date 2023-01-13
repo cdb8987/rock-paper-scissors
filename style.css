@@ -23,18 +23,18 @@ form {
 #rock {
     height: 200px;
     width: 200px;
-    background-image: url(rock.webp);
+    background-image: url(images/rock.webp);
 
 }
 
 #paper {
     height: 200px;
     width: 200px;
-    background-image: url(paper.webp);
+    background-image: url(images/paper.webp);
 }
 
 #scissors {
     height: 200px;
     width: 200px;
-    background-image: url(scissors.webp);
+    background-image: url(images/scissors.webp);
 }
