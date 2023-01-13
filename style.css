@@ -4,10 +4,16 @@ h1 {
 
 p {
     text-align: center;
+    text-align: ;
 }
 
 form {
     text-align: center;
+}
+
+.gamedata {
+    padding-top: 100px;
+    font-size: x-large;
 }
 
 #rock {
