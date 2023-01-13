@@ -7,26 +7,15 @@ const displayCompChoice = document.getElementById('computerchoice')
 const displayResult = document.getElementById('result')
 const userScore = document.getElementById('userscore');
 const computerScore = document.getElementById('computerscore');
-let pl = 0;
-let cp = 0;
-
+let pl = 0; //player score
+let cp = 0; //computer score
 
 function playGame(userChoice) {
     const choiceList = ['rock', 'paper', 'scissors'];
     const randomNumber = Math.floor(Math.random() * choiceList.length);
     const compChoice = choiceList[randomNumber];
-    console.log(userChoice, compChoice);
     let result = evaluateOutcome(userChoice, compChoice);
-    console.log(`Result is ${result}`)
-    pl += result[0];
-    cp += result[1];
-    displayUserChoice.innerText = `You chose:  ${userChoice}`;
-    displayCompChoice.innerText = `Computer chose:  ${compChoice}`;
-    displayResult.innerText = `${result[2]}`;
-    userScore.innerText = `WINS:    ${pl}`;
-    computerScore.innerText = `LOSSES:    ${cp}`;
-
-
+    displayOutcome(userChoice, compChoice, result)
 }
 
 function evaluateOutcome(userChoice, compChoice) {
@@ -40,10 +29,17 @@ function evaluateOutcome(userChoice, compChoice) {
     else if (userChoice == 'paper' && compChoice == 'scissors') { outcome = [0, 1, 'YOU LOSE!'] }
 
     return outcome //returns array containing 1. amount to increment userscore, 2. amount to increment compscore and 3. Alert message that will be displayed
-
-
 }
 
+function displayOutcome(userChoice, compChoice, result) {
+    pl += result[0];
+    cp += result[1];
+    displayUserChoice.innerText = `You chose:  ${userChoice}`;
+    displayCompChoice.innerText = `Computer chose:  ${compChoice}`;
+    displayResult.innerText = `${result[2]}`;
+    userScore.innerText = `WINS:${pl}`;
+    computerScore.innerText = `LOSSES:${cp}`;
+}
 
 rockButton.onclick = function () {
     playGame('rock');
